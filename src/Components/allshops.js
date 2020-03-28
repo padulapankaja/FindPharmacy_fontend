@@ -128,25 +128,25 @@ class AllShops extends Component {
                         <form onSubmit={this.Onsubmit}>
                             <div className="row mt-2">
                                 {/* right */}
-                                <div className="col-md-6">
+                                <div className="col-md-6 mb-2">
 
 
                                     <input
                                         type="text"
                                         className="form-control"
-                                        placeholder="Enter  District "
+                                        placeholder="Enter  MOH Area "
                                         name="fname"
                                         onChange={this.OnchangeSearch}
                                         required
                                     />
                                 </div>
-                                <div className="col-md-6">
-                                    <button type="submit" className="btn btn-success btn-md _search_btn">
+                                <div className="col-md-6  ">
+                                    <button type="submit" className="btn btn-success btn-md _search_btn ">
                                         Search
                                          </button>
                                 </div>
                                 <div className="col-md-12">
-                                    <p> <b>Please enter your District and click Search</b></p>
+                                    <p> <b>Please Enter Your MOH Area  and Click Search</b></p>
                                 </div>
                             </div>
                         </form>
@@ -155,13 +155,13 @@ class AllShops extends Component {
                 <div className="row">
 
                     <div className="all_pharam" style={{ display: this.state.searchedArray.length <= 0 ? 'none' : 'block' }} >
-                        <h3 style={{ display: this.state.searchedArray.length <= 0 ? 'none' : 'block' }} >{this.state.searchedArray.length} &nbsp; &nbsp; Pharmacies  in &nbsp;&nbsp; {this.state.searchKey}&nbsp;&nbsp;  District </h3>
+                        <h3 style={{ display: this.state.searchedArray.length <= 0 ? 'none' : 'block' }} >{this.state.searchedArray.length} &nbsp; &nbsp; Pharmacies  in &nbsp;&nbsp; {this.state.searchKey}&nbsp;&nbsp;  MOH Area </h3>
                     </div>
                     {/* {this.ListofAllPharmacy()} */}
                     {this.ListofSearchPharmacy()}
 
                 </div>
-                <div className="row">
+                <div className="row mt-2">
                     <div className="all_pharam">
                         <h3>All Pharmacies</h3>
                     </div>

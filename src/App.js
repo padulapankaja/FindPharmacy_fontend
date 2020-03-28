@@ -19,8 +19,10 @@ import {
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.onClick = this.onClick.bind(this);
 
+    this.state = {
+      collapse:false
     };
 
     
@@ -28,7 +30,11 @@ class App extends Component {
   }
 
   
-
+  onClick() {
+    this.setState({
+      collapse: !this.state.collapse,
+    });
+  }
   render() {
     return (
       <div>
@@ -38,8 +44,8 @@ class App extends Component {
           <MDBNavbarBrand>
             <strong className="white-text">Find Nearest Pharmacy </strong>
           </MDBNavbarBrand>
-          <MDBNavbarToggler onClick={this.toggleCollapse} />
-          <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
+          <MDBNavbarToggler onClick={this.onClick} />
+          <MDBCollapse id="navbarCollapse3" isOpen={this.state.collapse} navbar>
             <MDBNavbarNav left>
               <MDBNavItem active>
                 <MDBNavLink to="/">Find</MDBNavLink>
@@ -73,6 +79,7 @@ class App extends Component {
       <Switch>
         <Route path="/"  exact component={AllShops} />
         <Route path="/howorder"  exact component={Howorder} />
+        <Route path='*'   component={Howorder} />
        
         </Switch>
     </Router>
