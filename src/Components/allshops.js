@@ -1,4 +1,3 @@
-/*  eslint-disable */
 
 import React, { Component } from 'react';
 
@@ -15,7 +14,7 @@ import Loading from "../Components/loading"
 import p1 from '../Images/main-qimg-7bb4172052a760365f5a1c35142eaea3.png'
 import p2 from '../Images/pharmacy_app.png'
 
-
+import AllDistrics from './Districts.json'
 
 
 class AllShops extends Component {
@@ -25,12 +24,17 @@ class AllShops extends Component {
         this.OnchangeSearch = this.OnchangeSearch.bind(this)
         this.Onsubmit = this.Onsubmit.bind(this)
         this.ListofSearchPharmacy = this.ListofSearchPharmacy.bind(this)
+        this.onchangeDistrcs = this.onchangeDistrcs.bind(this)
+        this.onChangeMoheArea = this.onChangeMoheArea.bind(this)
         this.state = {
             allshops: [],
             searchKey: '',
             searchedArray: [],
             loading: false,
-            image:true
+            image:true,
+            AlldestricsandMoheAreas:[],
+            userSelectedDistrct:'',
+            userSelectedMoheAred:[]
         };
 
 
@@ -38,32 +42,16 @@ class AllShops extends Component {
     }
 
 
-    // async componentWillMount() {
-    //     this.setState({
-    //         loading: true,
-    //     })
-    //     await axios.get(`${NewsApi.server}${NewsApi.port}${NewsApi.api.all}`).then(res => {
-    //         console.log("Success Send");
-    //         console.log(res);
-
-    //         this.setState({
-    //             allshops: res.data
-    //         })
-
-    //     }).catch(function (error) {
-    //         console.log(error);
-    //     })
-
-    //     await console.log(this.state.allshops);
 
 
-    //     this.ListofAllPharmacy()
-
-    //     this.setState({
-    //         loading: false,
-    //     })
-    // }
-
+  async  componentWillMount(){
+        
+     await   this.setState({
+            AlldestricsandMoheAreas : AllDistrics.Districst
+        })
+     await   console.log(this.state.AlldestricsandMoheAreas);
+        
+    }
 
     ListofAllPharmacy() {
         return this.state.allshops.map((data, i) => {
@@ -118,33 +106,84 @@ class AllShops extends Component {
         this.setState({
             loading: false,
             // searchKey:''
-            image:false
+            image:false,
+            // userSelectedDistrct:'',
+            // userSelectedMoheAred:[]
         })
+
+
+
     }
 
 
 
+  async  onchangeDistrcs(e){
+
+        
+    await    this.setState({
+            userSelectedDistrct:e.target.value
+        })
+     await   console.log(this.state.userSelectedDistrct);
+
+     var temp1 = this.state.AlldestricsandMoheAreas
+     let slectedObject = temp1.find(el => el.districtName === this.state.userSelectedDistrct);
+   await  console.log(slectedObject);
+    await this.setState({
+        userSelectedMoheAred:slectedObject.moharea
+     })
+     
+   await  console.log(this.state.userSelectedMoheAred);
+     
+
+
+    }
+
+    onChangeMoheArea(e){
+        console.log(e.target.value);
+        
+    }
 
     render() {
         return (
             <div className="container">
                 {this.state.loading ? <Loading /> : null}
                 <div className="row">
+                
                     <div className="col-md-12">
                         <form onSubmit={this.Onsubmit}>
                             <div className="row mt-2">
                                 {/* right */}
-                                <div className="col-md-6 mb-2">
+                                <div className="col-md-3 mb-2">
+
+                                <select className="form-control" onChange={this.onchangeDistrcs} required>
+                            <option>Select Your Distrcit</option>
+                                {
+                               
+                                this.state.AlldestricsandMoheAreas.map((data, i) => 
+                                (<option key={i} value={data.districtName} >{data.districtName}</option>))
+                                }
+                    </select>
+</div>
+                    <div className="col-md-3 mb-2">
+
+                <select className="form-control" onChange={this.onChangeMoheArea} required>
+                            <option>Select Your Nearest Town</option>
+                                {
+                               
+                                this.state.userSelectedMoheAred.map((data, i) => 
+                                (<option key={i} value={data} >{data}</option>))
+                                }
+                    </select>
 
 
-                                    <input
+                                    {/* <input
                                         type="text"
                                         className="form-control"
                                         placeholder="Enter  MOH Area "
                                         name="fname"
                                         onChange={this.OnchangeSearch}
                                         required
-                                    />
+                                    /> */}
                                 </div>
                                 <div className="col-md-6  ">
                                     <button type="submit" className="btn btn-success btn-md _search_btn ">

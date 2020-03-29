@@ -1,0 +1,16 @@
+{
+    "Districst":[ {
+                     "districtName" : "Galle",
+                    "moharea":["Galle", "Karapitiya" ]
+                },
+                {
+                    "districtName" : "Colombo",
+                   "moharea":["Colombo1", "Colombo2", "Colombo3" ]
+               }
+               ,
+                {
+                    "districtName" : "Ampara",
+                      "moharea":["Ampara", "mathara" ]
+               }
+            ]
+}
