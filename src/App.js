@@ -10,7 +10,7 @@ import 'mdbreact/dist/css/mdb.css';
 import AllShops from './Components/allshops'
 import Howorder from './Components/howorder'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
+import lucidex from './Images/lucidex.png'
 import {
   MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse,
    MDBIcon, MDBFooter, MDBContainer, MDBRow, MDBCol
@@ -60,19 +60,22 @@ class App extends Component {
                 <MDBNavLink to="/update/:id">Update</MDBNavLink>
               </MDBNavItem> */}
             </MDBNavbarNav>
-            {/* <MDBNavbarNav right>
+            <MDBNavbarNav right>
+            
               <MDBNavItem>
+                <MDBNavLink className="waves-effect waves-light" to="">
+                Powered  by Lucidex
+                </MDBNavLink>
+                </MDBNavItem>
+              {/* <MDBNavItem>
                 <MDBNavLink className="waves-effect waves-light" to="#!">
-                  <MDBIcon fab icon="twitter" />
+              
+                 <img src={lucidex} className="img-fluid" style={{height:'30px' , width:'30px'}}/>
                 </MDBNavLink>
               </MDBNavItem>
-              <MDBNavItem>
-                <MDBNavLink className="waves-effect waves-light" to="#!">
-                  <MDBIcon fab icon="google-plus-g" />
-                </MDBNavLink>
-              </MDBNavItem>
+            */}
              
-            </MDBNavbarNav> */}
+            </MDBNavbarNav>
           </MDBCollapse>
         </MDBNavbar>
       </div>

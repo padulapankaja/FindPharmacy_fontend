@@ -155,7 +155,7 @@ class AllShops extends Component {
                 <div className="row">
 
                     <div className="all_pharam" style={{ display: this.state.searchedArray.length <= 0 ? 'none' : 'block' }} >
-                        <h3 style={{ display: this.state.searchedArray.length <= 0 ? 'none' : 'block' }} >{this.state.searchedArray.length} &nbsp; &nbsp; Pharmacies  in &nbsp;&nbsp; {this.state.searchKey}&nbsp;&nbsp;  MOH Area </h3>
+                        <h3 className="all_pharam_title" style={{ display: this.state.searchedArray.length <= 0 ? 'none' : 'block' }} >{this.state.searchedArray.length} &nbsp; Pharmacies  in &nbsp; {this.state.searchKey}&nbsp;  MOH Area </h3>
                     </div>
                     {/* {this.ListofAllPharmacy()} */}
                     {this.ListofSearchPharmacy()}
