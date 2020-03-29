@@ -5,7 +5,7 @@ class NewsApi {
   constructor() {
 
     // this.server = "http://127.0.0.1";
-   this.server = "http://18.220.184.55";
+     this.server = "http://18.220.184.55";
     this.port = ":4000"
     this.authPort = "";
     //cotact us api
