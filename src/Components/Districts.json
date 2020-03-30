@@ -1,16 +1,130 @@
 {
     "Districst":[ {
-                     "districtName" : "Galle",
-                    "moharea":["Galle", "Karapitiya" ]
+                     "districtName" : "Ampara",
+                    "moharea":["Akkaraipattu", "Ampara", "Dehiattakandiya", "Mahaoya", "Padiyathalawa", "Uhana" ]
                 },
                 {
-                    "districtName" : "Colombo",
-                   "moharea":["Colombo1", "Colombo2", "Colombo3" ]
+                    "districtName" : "Anuradhapura",
+                   "moharea":["Anuradhapura", "Galnewa", "Horowpothana", "Ipalogama", "Kahatagasdigiliya", "Kekirawa", "Medawachchiya" , "Mihinthale", "Nachchaduwa", "Nuwaragam", "Vilachchiya", "Palagala", "Palugaswewa", "Rajanganaya", "Rambewa", "Thalawa", "Thambuththegama", "Thirappane"]
                }
                ,
                 {
-                    "districtName" : "Ampara",
-                      "moharea":["Ampara", "mathara" ]
+                    "districtName" : "Badulla",
+                      "moharea":["Badulla", "Bandarawela", "Ella", "Girandurukotte", "Haliela", "Haputhale", "Kandekatiya", "Mahiyanganaya", "Meegahakiula", "Passara", "Welimada" ]
                }
+               ,
+                {
+                    "districtName" : "Batticaloa",
+                      "moharea":["Arayampathy", "Batticaloa", "Chenkaladi", "Eravur", "Kaluwanchikudy", "Kattankudy", "Kiran", "Oddamavady", "Valaichenai", "Vellavely" ]
+               }
+               ,
+                {
+                    "districtName" : "Colombo",
+                      "moharea":["Avissawella", "Battaramulla", "Boralasgamuwa", "Borlesgamuwa", "Mattakkuliya", "Bambalapitiya", "Wellawatha", "Grandpass", "Kirulapona", "Colombo", "Kotahena", "Pettah", "Narahenpita", "Kollupitiya", "Modara", "Borella","Colombofort", "Aluthkade","Dematagoda", "Slaveisland" , "Dehiwala", "Hanwella","Homagama", "Kaduwela", "Kahathuduwa","Kalubowila", "Kesbewa","Kolonnawa", "Kottawa", "Maharagama","Moratuwa","Nugegoda","Padukka", "Piliyandala", "Pitakotte", "Rathmalana","Thalawathugoda"]
+               } ,
+               {
+                   "districtName" : "Galle",
+                     "moharea":["Ahanhgama", "Ambalangoda", "Baddegama", "Balapitiya", "Batapola", "Elpitiya", "Galle", "Habaraduwa", "Imaduwa", "Karandeniya", "Karapitiya", "Niyagama", "Ratgama", "Thalgaswala", "Udugama", "Yakkalamulla" ]
+              }
+              ,
+               {
+                   "districtName" : "Gampaha",
+                     "moharea":["Attanagalla", "Biyagama", "Divulapitiya", "Dompe", "Gampaha", "Jaela", "Katana", "Kelaniya", "Mahara", "Minuwangoda", "Mirigama", "Negombo", "Ragama", "Seeduwa", "Wattala" ]
+              }
+              ,
+               {
+                   "districtName" : "Hambanthota",
+                     "moharea":["Ambalanthota", "Beliatta", "Hambanthota", "Katuwana", "Lunugamwehera", "Sooriyawewa", "Tangalle", "Thissamaharama", "Walasmulla", "Weeraketiya" ]
+              }
+              ,
+               {
+                   "districtName" : "Jaffna",
+                     "moharea":["Chankanai", "Chavakachcheri", "Jaffna", "Karaveddy", "Kopay", "Maruthankerny", "Nallur", "Pointpedro", "Sandilipay", "Tellipallai", "Uduvil" ]
+              }
+              ,
+               {
+                   "districtName" : "Kalmunai",
+                     "moharea":["Addalaichenai", "Kalmunai", "Ninthavur", "Pottuvil", "Sainthamaruthu", "Sammanthurai", "Thirukkovil" ]
+              }
+              ,
+               {
+                   "districtName" : "Kalutara",
+                     "moharea":["Agalawattha", "Baduraliya", "Bandaragama", "Beruwala", "Bulathsinhala", "Dodangoda", "Horana", "Ingiriya", "Kalutara", "Madirawela", "Panadura","Mathugama"  , "Wadduwa","Walallavita" ]
+              }
+              ,
+               {
+                   "districtName" : "Kandy",
+                     "moharea":["Akurana", "Bambaradeniya", "Galagedara", "Galahadeltota", "Gampola", "Gangawatakorale", "Hasalaka", "Hatharaliyadda", "Kandy", "Kundasale", "Kurunduwatta","Manikhinna"  , "Medadumbara","Nawalapitiya", "Panvila", "Poojapitiya", "Thalathuoya", "Udadumbara", "Udunuwara", "Waththegama", "Werellagama", "Yatinuwara" ]
+              }
+              ,
+              {
+                  "districtName" : "Kegalle",
+                    "moharea":["Aranayaka", "Bulathkohupitiya", "Dehiowita", "Deraniyagala", "Galigamuwa", "Karawanella", "Kegalle", "Mawanella", "Rabukkana", "Ruwanwella", "Warakapola","Yatiyanthota" ]
+             }
+              ,
+              {
+                  "districtName" : "Kilinochchi",
+                    "moharea":["Kandawalai", "Karachchi", "Palai" ]
+             }
+              ,
+              {
+                  "districtName" : "Kurunegala",
+                    "moharea":["Alawwa", "Ambanpola", "Galgamuwa", "Giribawa", "Gribawa", "Hettipola", "Ibbagamuwa","Katupotha", "Kobeigane", "Kuliyapitiya", "Kurunegala", "Maho","Mallawapitiya", "Mawathagama", "Meegalewa", "Narammala","Nikaweratiya", "Pannala", "Polgahawela", "Rasnayakapura", "Wariyapola" ]
+             }
+              ,
+              {
+                  "districtName" : "Mannar",
+                    "moharea":["Mannar", "Manthai", "Musali", "Nanattan" ]
+             }
+             ,
+             {
+                 "districtName" : "Matale",
+                   "moharea":["Dambulla", "Galewela", "Matale", "Naula" , "Pallepola", "Rattota", "Ukuwela", "Wilgamuwa", "Yatawatte"]
+            }
+             ,
+             {
+                 "districtName" : "Matara",
+                   "moharea":["Akuressa", "Athuruliya", "Devinuwara", "Dickwella" , "Hakmana", "Kamburupitiya", "Kekanadura", "Yatiyana", "Kotapola", "Deniyaya", "Malimbada", "Matara", "Morawaka", "Mulatiyana", "Urubokka", "Tihagoda", "Weligama", "Welipitiya"]
+            }
+             ,
+             {
+                 "districtName" : "Monaragala",
+                   "moharea":["Badalkumbura", "Bibila", "Buttala", "Kataragama" , "Madulla", "Medagama", "Monaragala", "Sevanagala", "Siyambalanduwa", "Thanamalwila", "Wellawaya"]
+            }
+             ,
+             {
+                 "districtName" : "Mullaitivu",
+                   "moharea":["Mullaitivu", "Puthukudiyiruppu"]
+            }
+             ,
+             {
+                 "districtName" : "Nuwara Eliya",
+                   "moharea":["Nawalapitiya", "Ambagamuwa", "Bogawanthalawa", "Kotagala" , "Kothmale", "Lindula", "Maskeliya", "Mathurata", "Nuwaraeliya", "Walapane"]
+            }
+             ,
+             {
+                 "districtName" : "Polonnaruwa",
+                   "moharea":["Elahera", "Higurakgoda", "Hingurakgoda", "Lankapura" , "Medirigiriya", "Thamankaduwa", "Welikanda"]
+            }
+             ,
+             {
+                 "districtName" : "Puttalam",
+                   "moharea":["Anamaduwa", "Chilaw", "Dankotuwa", "Kalpitiya" , "Madampe", "Mahawewa", "Marawila", "Mundalama", "Nattanditya", "Puttalam", "Wennappuwa"]
+            }
+             ,
+             {
+                 "districtName" : "Ratnapura",
+                   "moharea":["Ayagama", "Balangoda", "Eheliyagoda", "Embilipitiya" , "Godakawela", "Imbulpe", "Kahawatta", "Kalawana", "Kiriella", "Kolonna", "Kuruwita", "Opanayaka", "Palmadulla", "Ratnapura", "Udawalawa","Weligepola"]
+            }
+             ,
+             {
+                 "districtName" : "Trincomalee",
+                   "moharea":["Kanthale", "Kinniya", "Trincomalee"]
+            }
+             ,
+             {
+                 "districtName" : "Vavuniya",
+                   "moharea":["Vavuniya"]
+            }
             ]
 }

@@ -27,8 +27,13 @@
   
     .all_pharam_title{
 
-      font-size: 18px !important;
+      font-size: 15px !important;
+
     }
     
   }
-  
+  .new_card_admin{
+    height: 250px !important;
+    background-size: 100% 100%; 
+    
+  }
