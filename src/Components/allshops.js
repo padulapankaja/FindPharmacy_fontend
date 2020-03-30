@@ -218,7 +218,7 @@ class AllShops extends Component {
                                          </button>
                                 </div>
                                 <div className="col-md-12">
-                                    <p> <b>Please Enter Your MOH Area  and Click Search</b></p>
+                                    <p> <b>Please Select Your District and Nearest Town  and Click Search</b></p>
                                 </div>
                             </div>
                         </form>
