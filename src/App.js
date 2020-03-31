@@ -1,4 +1,3 @@
-/*  eslint-disable */
 
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,11 +12,12 @@ import FindPhis from './Components/findphis'
 import HealthNews from './Components/News/healthnews'
 import AyurvedaNews from './Components/News/ayurvedanews'
 import Corona from './Components/News/corona'
+import HelpforOthers from './Components/Forum/helpforothers'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import lucidex from './Images/lucidex.png'
 import {
   MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse,
-  MDBIcon, MDBFooter, MDBContainer, MDBRow, MDBCol
+  MDBIcon, MDBFooter, MDBContainer, MDBRow, MDBCol, MDBDropdown, MDBDropdownItem, MDBDropdownToggle, MDBDropdownMenu
 } from "mdbreact";
 
 class App extends Component {
@@ -64,11 +64,26 @@ class App extends Component {
                     <MDBNavLink to="/corona" style={{ color: '#2980b9', fontWeight: '900' }}>Lates Corona Updates</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
+                    <MDBDropdown>
+                      <MDBDropdownToggle nav caret>
+                        <div className="d-md-inline">News</div>
+                      </MDBDropdownToggle>
+                      <MDBDropdownMenu className="dropdown-default">
+                        <MDBDropdownItem href="/healthnews">Health News</MDBDropdownItem>
+                        <MDBDropdownItem href="/ayurveda">Ayurvedic News</MDBDropdownItem>
+
+                      </MDBDropdownMenu>
+                    </MDBDropdown>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to="/helpforothers">Help for Others</MDBNavLink>
+                  </MDBNavItem>
+                  {/* <MDBNavItem>
                     <MDBNavLink to="/healthnews">Health News</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
                     <MDBNavLink to="/ayurveda">Ayurvedic News</MDBNavLink>
-                  </MDBNavItem>
+                  </MDBNavItem> */}
                   {/* <MDBNavItem>
                 <MDBNavLink to="/view">About Us</MDBNavLink>
               </MDBNavItem> */}
@@ -79,7 +94,7 @@ class App extends Component {
                 <MDBNavbarNav right>
 
                   <MDBNavItem>
-                    <MDBNavLink className="waves-effect waves-light" to="" style={{fontWeight: '700' }}>
+                    <MDBNavLink className="waves-effect waves-light" to="" style={{ fontWeight: '700' }}>
                       Powered  by Lucidex
                 </MDBNavLink>
                   </MDBNavItem>
@@ -102,6 +117,7 @@ class App extends Component {
             <Route path="/healthnews" exact component={HealthNews} />
             <Route path="/ayurveda" exact component={AyurvedaNews} />
             <Route path="/corona" exact component={Corona} />
+            <Route path="/helpforothers" exact component={HelpforOthers} />
             <Route path='*' component={Howorder} />
 
           </Switch>
