@@ -1,4 +1,4 @@
-
+   /*  eslint-disable */
 import React, { Component } from 'react';
 
 import '../Components/allshops.css';
@@ -65,7 +65,7 @@ class AllShops extends Component {
             console.log(error);
         })
 
-        await console.log(this.state.covidDetails);
+        // await console.log(this.state.covidDetails);
 
 
     }
@@ -95,7 +95,7 @@ class AllShops extends Component {
             image: false
 
         })
-       
+
         e.preventDefault();
         var search = this.state.searchKey
 
@@ -105,8 +105,8 @@ class AllShops extends Component {
         const keyWor = {
             id: search
         }
-        await console.log("This is key worwd------");
-        await console.log(search);
+        // await console.log("This is key worwd------");
+        // await console.log(search);
 
         await axios.post(`${NewsApi.server}${NewsApi.port}${NewsApi.api.search}`, { keyWor }).then(res => {
 
@@ -167,7 +167,7 @@ class AllShops extends Component {
         this.setState({ checked });
 
 
-      }
+    }
 
 
     render() {
@@ -175,12 +175,20 @@ class AllShops extends Component {
             <div className="container">
                 {this.state.loading ? <Loading /> : null}
                 <div className="row">
-
+                    <div className="col-md-3 mt-2">
+                        <h5>Find Your Nearest Pharmacy</h5>
+                    </div>
+                    <div className="col-md-4 mt-2">
+                        <h5>ඔබේ ළඟම ෆාමසිය සොයා ගන්න</h5>
+                    </div>
+                    <div className="col-md-5 mt-2">
+                        <h5>உங்கள் அருகிலுள்ள மருந்தகத்தைக் கண்டுபிடி</h5>
+                    </div>
                     <div className="col-md-12 mt-4">
                         <form onSubmit={this.Onsubmit}>
                             <div className="row mt-2">
                                 {/* right */}
-                                <div className="col-md-3 mb-2">
+                                <div className="col-md-4 mb-2">
 
                                     <select className="form-control" onChange={this.onchangeDistrcs} required>
                                         <option value="Badulla">Select Your Distrcit</option>
@@ -191,7 +199,7 @@ class AllShops extends Component {
                                         }
                                     </select>
                                 </div>
-                                <div className="col-md-3 mb-2">
+                                <div className="col-md-4 mb-2">
 
                                     <select className="form-control" onChange={this.onChangeMoheArea} required>
                                         <option>Select Your Nearest Town</option>
@@ -201,24 +209,20 @@ class AllShops extends Component {
                                                 (<option key={i} value={data} >{data}</option>))
                                         }
                                     </select>
-
-
-                                    {/* <input
-                                        type="text"
-                                        className="form-control"
-                                        placeholder="Enter  MOH Area "
-                                        name="fname"
-                                        onChange={this.OnchangeSearch}
-                                        required
-                                    /> */}
                                 </div>
-                                <div className="col-md-6  ">
+                                <div className="col-md-3">
                                     <button type="submit" className="btn btn-success btn-md _search_btn ">
                                         Search
                                          </button>
                                 </div>
-                                <div className="col-md-12">
-                                    <p> <b>Please Select Your District and Nearest Town  and Click Search</b></p>
+                                <div className="col-md-3">
+                                    <p style={{ fontSize: '13px', fontWeight: '700' }}> Please Select Your District and Nearest Town  and Click Search</p>
+                                </div>
+                                <div className="col-md-3">
+                                    <p style={{ fontSize: '13px', fontWeight: '700' }}> කරුණාකර ඔබේ දිස්ත්‍රික්කය සහ ළඟම නගරය තෝරන්න</p>
+                                </div>
+                                <div className="col-md-6">
+                                    <p style={{ fontSize: '13px', fontWeight: '700' }}> தயவுசெய்து உங்கள் மாவட்டத்தையும் அருகிலுள்ள நகரத்தையும் தேர்ந்தெடுத்து தேடலைக் கிளிக் செய்க</p>
                                 </div>
                             </div>
                         </form>
@@ -227,18 +231,11 @@ class AllShops extends Component {
                 <div className="row">
 
                     <div className="col-md-12">
-                        <img style={{ display: this.state.image == true ? 'block' : 'none' }} className="img-fluid mb-4 mt-4" src={p1} />
-                        {/* <h5 className="title" style={{fontWeight:'900'}}> How to protect yourself from the coronavirus</h5>
-                <p>Wash your hands</p>
-                <p>Stay home</p>
-                <p>Boost your immune system</p> */}
+                        <center>
+                            <img style={{ display: this.state.image == true ? 'block' : 'none', width: '40%' }} className="img-fluid mb-4 mt-4" src={p1} />
 
+                        </center>
                     </div>
-
-
-                    {/* <div className="col-md-6">
-                <img src={p2}/>
-                </div> */}
                     <div className="all_pharam" style={{ display: this.state.searchedArray.length <= 0 ? 'none' : 'block' }} >
                         <h3 className="all_pharam_title" style={{ display: this.state.searchedArray.length <= 0 ? 'none' : 'block' }} >{this.state.searchedArray.length} &nbsp; Pharmacies  Available </h3>
                     </div>
@@ -246,51 +243,43 @@ class AllShops extends Component {
                     {this.ListofSearchPharmacy()}
 
                 </div>
-                {/* <div className="row mt-2">
-                    <div className="all_pharam">
-                        <h3>All Pharmacies</h3>
-                    </div>
-                    {this.ListofAllPharmacy()}
-
-                </div> */}
-
 
                 <div className="row text-center">
                     <br />
                     <div className="col-md-12 mt-2 ">
-                         <h4 style={{fontWeight:'900'}}> COVID-19 patients reported in Sri Lanka.</h4>
+                        <h4 style={{ fontWeight: '900' }}> COVID-19 patients reported in Sri Lanka.</h4>
                     </div>
                     <div className="col-md-4 mt-2">
-                        
-                        <div className="card card-image "  style={{ backgroundColor: '#ff9f43' }}>
-                            <div className="text-white text-center d-flex align-items-center rgba-black-slight py-5 px-4"  style={{height:'200px',  borderRadius:'10px'}}>
+
+                        <div className="card card-image " style={{ backgroundColor: '#ff9f43' }}>
+                            <div className="text-white text-center d-flex align-items-center rgba-black-slight py-5 px-4" style={{ height: '200px', borderRadius: '10px' }}>
                                 <div>
-                                   
+
                                     <h3 className="card-title pt-2"><strong>{this.state.covidDetails.local_total_cases}</strong></h3>
                                     <p>Cumulative count of confirmed COVID-19 cases in Sri Lanka</p>
-                                 
+
                                 </div>
                             </div>
 
                         </div>
                     </div>
                     <div className="col-md-4  mt-2">
-                    <div className="card card-image " style={{ backgroundColor: '#1dd1a1' }}>
-                            <div className="text-white text-center d-flex align-items-center rgba-black-slight py-5 px-4 "  style={{height:'200px',  borderRadius:'10px'}}>
+                        <div className="card card-image " style={{ backgroundColor: '#1dd1a1' }}>
+                            <div className="text-white text-center d-flex align-items-center rgba-black-slight py-5 px-4 " style={{ height: '200px', borderRadius: '10px' }}>
                                 <div>
-                                  
+
                                     <h2 className="card-title pt-2"><strong>{this.state.covidDetails.local_recovered}</strong></h2>
                                     <p>Total COVID-19 cases recovered and discharged in Sri Lanka</p>
                                 </div>
                             </div>
 
                         </div>
-                        </div>
-                    <div className="col-md-4  mt-2"> 
-                    <div className="card card-image " style={{ backgroundColor: '#ee5253' }}>
-                            <div className="text-white text-center d-flex align-items-center rgba-black-slight py-5 px-4"  style={{height:'200px',  borderRadius:'10px'}}>
+                    </div>
+                    <div className="col-md-4  mt-2">
+                        <div className="card card-image " style={{ backgroundColor: '#ee5253' }}>
+                            <div className="text-white text-center d-flex align-items-center rgba-black-slight py-5 px-4" style={{ height: '200px', borderRadius: '10px' }}>
                                 <div>
-                                    
+
                                     <h3 className="card-title pt-2"><strong>0{this.state.covidDetails.local_deaths}</strong></h3>
                                     <p>Total deaths due to COVID-19 reported in Sri Lanka</p>
                                 </div>
@@ -299,40 +288,40 @@ class AllShops extends Component {
                         </div>
                     </div>
                     <div className="col-md-12 mt-2">
-                    <br />
-                         <h4 style={{fontWeight:'900'}} > COVID-19 patients reported in Globally</h4>
+                        <br />
+                        <h4 style={{ fontWeight: '900' }} > COVID-19 patients reported in Globally</h4>
                     </div>
                     <div className="col-md-4 mt-2">
-                        
-                        <div className="card card-image "  style={{ backgroundColor: '#ff9f43' }}>
-                            <div className="text-white text-center d-flex align-items-center rgba-black-slight py-5 px-4"  style={{height:'200px',  borderRadius:'10px'}}>
+
+                        <div className="card card-image " style={{ backgroundColor: '#ff9f43' }}>
+                            <div className="text-white text-center d-flex align-items-center rgba-black-slight py-5 px-4" style={{ height: '200px', borderRadius: '10px' }}>
                                 <div>
-                                   
+
                                     <h3 className="card-title pt-2"><strong>{this.state.covidDetails.global_total_cases}</strong></h3>
                                     <p>Total global confirmed COVID-19 cases</p>
-                                 
+
                                 </div>
                             </div>
 
                         </div>
                     </div>
                     <div className="col-md-4  mt-2">
-                    <div className="card card-image " style={{ backgroundColor: '#1dd1a1' }}>
-                            <div className="text-white text-center d-flex align-items-center rgba-black-slight py-5 px-4 "  style={{height:'200px',  borderRadius:'10px'}}>
+                        <div className="card card-image " style={{ backgroundColor: '#1dd1a1' }}>
+                            <div className="text-white text-center d-flex align-items-center rgba-black-slight py-5 px-4 " style={{ height: '200px', borderRadius: '10px' }}>
                                 <div>
-                                  
+
                                     <h2 className="card-title pt-2"><strong>{this.state.covidDetails.global_recovered}</strong></h2>
                                     <p>Total Global COVID-19 cases who recovered</p>
                                 </div>
                             </div>
 
                         </div>
-                        </div>
-                    <div className="col-md-4  mt-2"> 
-                    <div className="card card-image " style={{ backgroundColor: '#ee5253' }}>
-                            <div className="text-white text-center d-flex align-items-center rgba-black-slight py-5 px-4"  style={{height:'200px',  borderRadius:'10px'}}>
+                    </div>
+                    <div className="col-md-4  mt-2">
+                        <div className="card card-image " style={{ backgroundColor: '#ee5253' }}>
+                            <div className="text-white text-center d-flex align-items-center rgba-black-slight py-5 px-4" style={{ height: '200px', borderRadius: '10px' }}>
                                 <div>
-                                    
+
                                     <h3 className="card-title pt-2"><strong>{this.state.covidDetails.global_deaths}</strong></h3>
                                     <p>Total global deaths due to COVID-19</p>
                                 </div>

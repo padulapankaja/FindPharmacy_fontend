@@ -3,15 +3,19 @@
 // import axios from "axios";
 class NewsApi {
   constructor() {
-
-    //this.server = "http://127.0.0.1";  //locally
+    this.serverNews = "http://89.40.15.19";
+   // this.server = "http://127.0.0.1";  //locally
      this.server = "http://13.59.42.212";    //rahals server 
     this.port = ":4000"
+    this.portNews = ":9000";
     this.authPort = "";
     //cotact us api
     this.api = {
       all: "/pharmacy/view",    
-      search: "/pharmacy/search"
+      search: "/pharmacy/search",
+      sarchphi: "/phi/searchphi",
+      news: "/api/news/",
+     
     };
   }
 }
