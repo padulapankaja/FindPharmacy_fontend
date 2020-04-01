@@ -1,0 +1,53 @@
+{
+    "Districst":[ 
+                 {
+                  "province" : "Western",
+              "districts":["Gampaha", "Colombo", "Kalutara" ]
+                 }
+                 ,{
+                     "province" : "Northern",
+                    "districts":["Jaffna", "Kilinochchi", "Mannar", "Mullaitivu", "Vavuniya" ]
+                },
+                {
+                    "province" : "NorthWestern",
+                   "districts":["Puttalam", "Kurunegala"]
+               }
+               ,
+               
+                {
+                    "province" : "NorthCentral",
+                      "districts":["Anuradhapura", "Polonnaruwa" ]
+               }
+               ,
+                {
+                    "province" : "Central",
+                      "districts":["Matale", "Matale" , "Nuwara-Eliya"]
+               }
+               ,
+                {
+                    "province" : "Sabaragamuwa",
+                      "districts":["Kegalle", "Ratnapura" ]
+               }
+           
+               ,
+                {
+                    "province" : "Eastern",
+                      "districts":["Trincomalee", "Batticaloa", "Ampara"]
+               }
+           
+               ,
+                {
+                    "province" : "Uva",
+                      "districts":["Badulla", "Monaragala"]
+               }
+           
+               ,
+                {
+                    "province" : "Southern",
+                      "districts":["Hambantota", "Matara", "Galle"]
+               }
+           
+          
+            
+            ]
+}

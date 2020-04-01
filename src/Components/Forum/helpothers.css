@@ -1,0 +1,22 @@
+.formCards{
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px  rgb(188, 188, 194);
+    margin:5px ;
+}
+.formLables{
+    text-align: left !important;
+    margin: 0px;
+    font-size: 15px;
+    font-weight: 500;
+}
+::placeholder{
+    font-size: 13px !important; 
+}
+
+.addTitle{
+    text-align: left;
+    font-size: 22px;
+    font-weight: 900;
+    margin:10px 0px 10px 0px !important;
+}

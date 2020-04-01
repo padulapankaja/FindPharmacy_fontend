@@ -13,7 +13,9 @@ import HealthNews from './Components/News/healthnews'
 import AyurvedaNews from './Components/News/ayurvedanews'
 import Corona from './Components/News/corona'
 import HelpforOthers from './Components/Forum/helpforothers'
+import ViewWhoWantHelp from './Components/Forum/viewhowwanthelp'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import lucidex from './Images/lucidex.png'
 import {
   MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse,
@@ -76,7 +78,33 @@ class App extends Component {
                     </MDBDropdown>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="/helpforothers">Help for Others</MDBNavLink>
+
+
+
+
+                  <MDBDropdown>
+                      <MDBDropdownToggle nav caret>
+                        <div className="d-md-inline">Help for Others</div>
+                      </MDBDropdownToggle>
+                      <MDBDropdownMenu className="dropdown-default">
+                        <MDBDropdownItem href="/howwanthelp">How Want Help</MDBDropdownItem>
+                        <MDBDropdownItem href="/helpforothers">Add</MDBDropdownItem>
+
+                      </MDBDropdownMenu>
+                    </MDBDropdown>
+
+
+
+
+
+
+
+
+
+
+
+
+                    {/* <MDBNavLink to="/helpforothers">Help for Others</MDBNavLink> */}
                   </MDBNavItem>
                   {/* <MDBNavItem>
                     <MDBNavLink to="/healthnews">Health News</MDBNavLink>
@@ -118,6 +146,7 @@ class App extends Component {
             <Route path="/ayurveda" exact component={AyurvedaNews} />
             <Route path="/corona" exact component={Corona} />
             <Route path="/helpforothers" exact component={HelpforOthers} />
+            <Route path="/howwanthelp" exact component={ViewWhoWantHelp} />
             <Route path='*' component={Howorder} />
 
           </Switch>
