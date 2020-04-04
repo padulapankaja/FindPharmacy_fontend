@@ -101,9 +101,17 @@ class ViewWhoWantHelp extends Component {
 
         })
 
+        if(this.state.searchedArray.length <=0){
+            this.setState({
+              
+                image: true,
+    
+            })
+        }
         // await console.log(this.state.searchedArray);
         await this.getSearchlist();
       
+
 
     }
 
@@ -170,7 +178,7 @@ class ViewWhoWantHelp extends Component {
                                     <p style={{ fontSize: '13px', fontWeight: '700' }}> Please Select Your Province and District and Click Search</p>
                                 </div>
                                 <div className="col-md-3">
-                                    <p style={{ fontSize: '13px', fontWeight: '700' }}> කරුණාකර ඔබේ දිස්ත්‍රික්කය පළාත සහ දිස්ත්‍රික්කය තෝරන්න</p>
+                                    <p style={{ fontSize: '13px', fontWeight: '700' }}> කරුණාකර ඔබේ පළාත සහ දිස්ත්‍රික්කය තෝරන්න</p>
                                 </div>
                                 <div className="col-md-6">
                                     <p style={{ fontSize: '13px', fontWeight: '700' }}> தயவுசெய்து உங்கள் மாகாணம் மற்றும் மாவட்டத்தைத் தேர்ந்தெடுத்து தேடலைக் கிளிக் செய்க</p>

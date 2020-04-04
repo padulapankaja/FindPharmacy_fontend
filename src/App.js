@@ -17,6 +17,12 @@ import ViewWhoWantHelp from './Components/Forum/viewhowwanthelp'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import lucidex from './Images/lucidex.png'
+import howrelaxonlylogo from './Images/howrelaxOnlyLogo.png'
+import word from './Images/howrelaxwords.png'
+import AboutUs from './Components/CommoanPages/aboutus'
+import PP from './Components/CommoanPages/pp'
+import TOS from './Components/CommoanPages/tos'
+import CN from './Components/CommoanPages/contact'
 import {
   MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse,
   MDBIcon, MDBFooter, MDBContainer, MDBRow, MDBCol, MDBDropdown, MDBDropdownItem, MDBDropdownToggle, MDBDropdownMenu
@@ -48,47 +54,34 @@ class App extends Component {
           <div className="App">
             <MDBNavbar color="default-color" dark expand="md" >
               <MDBNavbarBrand>
-                <strong className="white-text">Find Nearest Pharmacy </strong>
+                {/* <strong className="white-text">HowRelax </strong> */}
+                <img src={word} className="img-fluid" style={{height:'30px'}}/>
               </MDBNavbarBrand>
               <MDBNavbarToggler onClick={this.onClick} />
+
+
+
+
               <MDBCollapse id="navbarCollapse3" isOpen={this.state.collapse} navbar>
                 <MDBNavbarNav left>
                   <MDBNavItem active>
                     <MDBNavLink to="/">Find Pharmacy</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="/findphis">Find PHI</MDBNavLink>
-                  </MDBNavItem>
-                  <MDBNavItem>
-                    <MDBNavLink to="/howorder">How Order</MDBNavLink>
-                  </MDBNavItem>
-                  <MDBNavItem>
-                    <MDBNavLink to="/corona" style={{ color: '#2980b9', fontWeight: '900' }}>Lates Corona Updates</MDBNavLink>
-                  </MDBNavItem>
-                  <MDBNavItem>
-                    <MDBDropdown>
-                      <MDBDropdownToggle nav caret>
-                        <div className="d-md-inline">News</div>
-                      </MDBDropdownToggle>
-                      <MDBDropdownMenu className="dropdown-default">
-                        <MDBDropdownItem href="/healthnews">Health News</MDBDropdownItem>
-                        <MDBDropdownItem href="/ayurveda">Ayurvedic News</MDBDropdownItem>
-
-                      </MDBDropdownMenu>
-                    </MDBDropdown>
+                    <MDBNavLink to="/findphis">Find PHI Agents</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
 
 
 
 
-                  <MDBDropdown>
+                    <MDBDropdown >
                       <MDBDropdownToggle nav caret>
                         <div className="d-md-inline">Help for Others</div>
                       </MDBDropdownToggle>
                       <MDBDropdownMenu className="dropdown-default">
-                        <MDBDropdownItem href="/howwanthelp">How Want Help</MDBDropdownItem>
-                        <MDBDropdownItem href="/helpforothers">Add</MDBDropdownItem>
+                        <MDBDropdownItem href="/howwanthelp">Who needs help</MDBDropdownItem>
+                        <MDBDropdownItem href="/helpforothers">Add informations</MDBDropdownItem>
 
                       </MDBDropdownMenu>
                     </MDBDropdown>
@@ -106,6 +99,27 @@ class App extends Component {
 
                     {/* <MDBNavLink to="/helpforothers">Help for Others</MDBNavLink> */}
                   </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to="/howorder">How Order</MDBNavLink>
+                  </MDBNavItem>
+
+                  {/* <MDBNavItem>
+                    <MDBNavLink to="/corona" style={{ color: '#2980b9', fontWeight: '900' }}>Lates Corona Updates</MDBNavLink>
+                  </MDBNavItem> */}
+                  <MDBNavItem>
+                    <MDBDropdown>
+                      <MDBDropdownToggle nav caret>
+                        <div className="d-md-inline">News</div>
+                      </MDBDropdownToggle>
+                      <MDBDropdownMenu className="dropdown-default">
+                        <MDBDropdownItem href="/corona" style={{ color: '#2980b9', fontWeight: '900' }}>Lates Corona Updates</MDBDropdownItem>
+                        <MDBDropdownItem href="/healthnews">Health News</MDBDropdownItem>
+                        <MDBDropdownItem href="/ayurveda">Ayurvedic News</MDBDropdownItem>
+
+                      </MDBDropdownMenu>
+                    </MDBDropdown>
+                  </MDBNavItem>
+
                   {/* <MDBNavItem>
                     <MDBNavLink to="/healthnews">Health News</MDBNavLink>
                   </MDBNavItem>
@@ -123,13 +137,14 @@ class App extends Component {
 
                   <MDBNavItem>
                     <MDBNavLink className="waves-effect waves-light" to="" style={{ fontWeight: '700' }}>
-                      Powered  by Lucidex
+                      <img src={howrelaxonlylogo} className="img-fluid" style={{height:'30px' , width:'30px'}}/>
+                      {/* Powered  by Lucidex */}
                 </MDBNavLink>
                   </MDBNavItem>
                   {/* <MDBNavItem>
                 <MDBNavLink className="waves-effect waves-light" to="#!">
               
-                 <img src={lucidex} className="img-fluid" style={{height:'30px' , width:'30px'}}/>
+                 <img src={howrelaxonlylogo} className="img-fluid" style={{height:'30px' , width:'30px'}}/>
                 </MDBNavLink>
               </MDBNavItem>
             */}
@@ -147,11 +162,110 @@ class App extends Component {
             <Route path="/corona" exact component={Corona} />
             <Route path="/helpforothers" exact component={HelpforOthers} />
             <Route path="/howwanthelp" exact component={ViewWhoWantHelp} />
+            <Route path="/aboutus" exact component={AboutUs} />
+            <Route path="/cn" exact component={CN} />
+            <Route path="/tos" exact component={TOS} />
+            <Route path="/pp" exact component={PP} />
             <Route path='*' component={Howorder} />
 
           </Switch>
+
+
+
+{/* ********************************************* */}
+<MDBFooter color="teal accent-4" className="font-small pt-4 mt-4" >
+      <MDBContainer fluid className="text-center text-md-left">
+        <MDBRow>
+          <MDBCol className="col-12 col-md-3"  > 
+          <img src={word} className="img-fluid" style={{height:'30px'}}/>
+
+             
+                    <h6 className="title" style={{ fontWeight: '800' }}>      Stay Home &nbsp; |&nbsp; Stop The Spread &nbsp;| &nbsp;Save  Lives</h6>
+                  
+          </MDBCol>
+          <MDBCol className="col-6 col-md-3" > 
+            {/* <h5 className="title">Links</h5> */}
+            <ul>
+              <li className="list-unstyled mt-1 " style={{fontWeight:'400', textAlign:'left'}}>
+                <a href="/">Find Pharmacy</a>
+              </li>
+              <li className="list-unstyled mt-1 " style={{fontWeight:'400', textAlign:'left'}}>
+                <a href="/findphis">Find PHI Agents</a>
+              </li>
+              <li className="list-unstyled mt-1 " style={{fontWeight:'400', textAlign:'left'}}>
+                <a href="/howwanthelp">Who need Help</a>
+              </li>
+              <li className="list-unstyled mt-1 " style={{fontWeight:'400', textAlign:'left'}}>
+                <a href="/helpforothers">Add Informations</a>
+              </li>
+            </ul>
+          </MDBCol>
+          <MDBCol className="col-6 col-md-3" > 
+            {/* <h5 className="title">Links</h5> */}
+            <ul>
+              <li className="list-unstyled mt-1 " style={{fontWeight:'400', textAlign:'left'}}>
+                <a href="/corona">Lates Corona Updates</a>
+              </li>
+              <li className="list-unstyled mt-1 " style={{fontWeight:'400', textAlign:'left'}}>
+                <a href="/healthnews">Health News</a>
+              </li>
+              <li className="list-unstyled mt-1 " style={{fontWeight:'400', textAlign:'left'}}>
+                <a href="/ayurveda">Ayurvedic News</a>
+              </li>
+              {/* <li className="list-unstyled mt-1 " style={{fontWeight:'400', textAlign:'left'}}>
+                <a href="#!">Link 4</a>
+              </li> */}
+            </ul>
+          </MDBCol>
+          <MDBCol className="col-6 col-md-3" > 
+            {/* <h5 className="title">Links</h5> */}
+            <ul>
+              <li className="list-unstyled mt-1 " style={{fontWeight:'400', textAlign:'left'}}>
+                <a href="/aboutus">About Us</a>
+              </li>
+              <li className="list-unstyled mt-1 " style={{fontWeight:'400', textAlign:'left'}}>
+                <a href="/cn">Contact Us</a>
+              </li>
+              <li className="list-unstyled mt-1 " style={{fontWeight:'400', textAlign:'left'}}>
+                <a href="/tos">Terms and Conditions</a>
+              </li>
+              <li className="list-unstyled mt-1 " style={{fontWeight:'400', textAlign:'left'}}>
+                <a href="/pp">Privacy Policy</a>
+              </li>
+            </ul>
+          </MDBCol>
+        </MDBRow>
+      </MDBContainer>
+      <div className="footer-copyright text-center py-1">
+      <MDBContainer fluid>
+                <a href="http://lucidex.lk/" target="_blank">   Copyright&nbsp; &copy; {new Date().getFullYear()} &nbsp;: &nbsp; <b>Lucidex</b></a>
+        </MDBContainer>
+      </div>
+    </MDBFooter>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </Router>
-        <div className="footer">
+        {/* <div className="footer" style={{bottom:'0px'}}>
           <MDBFooter color="default-color" className="font-small pt-4 mt-4">
             <MDBContainer fluid className="text-center text-md-left">
               <MDBRow>
@@ -168,7 +282,17 @@ class App extends Component {
               </MDBContainer>
             </div>
           </MDBFooter>
-        </div>
+        </div> */}
+
+
+
+
+
+
+
+
+
+
       </div>
     );
   }

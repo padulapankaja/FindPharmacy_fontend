@@ -351,7 +351,7 @@ class HelpforOthers extends Component {
                     <div className="row">
                         {/* right */}
                         <div className="col-md-5 formCards">
-                            <p className="addTitle">Your Informations </p>
+                            <p className="addTitle">Your Informations (ඔබගේ විස්තර / உங்கள் தகவல்கள் )</p>
                             <div className="row">
                                 <div className="col-md-12">
                                     <div className="form-group">
@@ -453,7 +453,7 @@ class HelpforOthers extends Component {
 
                         {/* left */}
                         <div className="col-md-6 formCards">
-                            <p className="addTitle">Others Informations </p>
+                            <p className="addTitle">Others Informations ( පීඩාවට පත් පුද්ගලයන් හෝ පවුල් පිලිබද විස්තර / உதவியற்ற குடும்பம் அல்லது நபர்கள் பற்றிய விவரங்கள்) </p>
                             <div className="row">
                                 <div className="col-md-12">
                                     <div className="form-group">
@@ -589,12 +589,12 @@ class HelpforOthers extends Component {
                         <div className="col-md-11">
                             <center>
                             <div className="btnInAddForm" style={{float:'right'}}>
-                                <button
+                                {/* <button
                                     type="button"
                                     className="btn btn-info"
                                 >
                                     Clear
-                                              </button>
+                                              </button> */}
                                 <button type="submit" className="btn btn-success">
                                     Add
                                          </button>

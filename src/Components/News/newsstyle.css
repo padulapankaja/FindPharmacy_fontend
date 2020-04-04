@@ -1,0 +1,21 @@
+.card_news_all{
+    box-shadow: 0px 0px 8px 5px rgba(181, 181, 181, 0.6);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 8px;
+    height: 148px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+  
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .card_news_all{
+    height: unset;
+  }
+    .news_images_ss{
+        padding-left: 15px !important;
+    }
+  }
