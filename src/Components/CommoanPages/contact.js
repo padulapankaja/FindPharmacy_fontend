@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './common.css'
+import newimg from '../../Images/newnew.png'
 
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
@@ -42,7 +43,7 @@ class ContactUS extends Component {
         return (
             <div className="container">
                 <div className="row mt-2">
-                    <div className="col-md-12 box_shp Cn_PA">
+                    <div className="col-md-6 box_shp Cn_PA">
                         <div className="col-md-12 " >
                             <h3>Contact Us</h3>
                         </div>
@@ -56,7 +57,7 @@ class ContactUS extends Component {
                                     <label for="inputEmail4">Last Name *</label>
                                     <input type="text" className="form-control" id="inputEmail4" placeholder="Last Name ..." required />
                                 </div>
-                                <div className="form-group col-md-12">
+                                <div className="form-group col-md-6">
                                     <label for="inputEmail4">Email</label>
                                     <input type="email" className="form-control" id="inputEmail4" placeholder="Email..." required />
                                 </div>
@@ -75,35 +76,40 @@ class ContactUS extends Component {
                             </div>
                             <button type="submit" className="btn btn-success" >Submit</button>
                         </form>
+                    </div>
+                    <div className="col-md-6">
                         <div className="col-md-12" >
-                            <h6>Social Networks</h6>
+                            <h4>Social Networks</h4>
                         </div>
                         <div className="row ml-1" >
-                        <div className="col-md-3 mt-1">
-                            <a href="https://www.facebook.com/lucidexsolutions/" target="_blank">
-                                <i className="fa fa-facebook mr-1 p-1"></i><span>Facebook</span>
-                            </a>
-                        </div>
-                        <div className="col-md-3 mt-1">
-                            <a href="https://www.linkedin.com/company/31043839/" target="_blank">
-                                <i className="fa fa-linkedin mr-1 p-1"></i><span>Linkedin</span>
-                            </a>
-                        </div>
-                        <div className="col-md-3 mt-1">
-                            <a href="https://www.instagram.com/lucidex_solutions/" target="_blank">
-                                <i className="fa fa-instagram mr-1 p-1m"></i><span>Instagram</span>
-                            </a>
-                        </div>
-                        <div className="col-md-3 mt-1">
-                            <a href="https://twitter.com/lucidex_" target="_blank">
-                                <i className="fa fa-twitter mr-1 p-1" ></i><span>Twitter</span>
-                            </a>
-                        </div>
-                        <div className="col-md-3 mt-1">
-                            <a href="mailto:inhowrelax@gmail.com" >
-                                <i className="fa fa-envelope mr-1 p-1" ></i><span>Email : inhowrelax@gmail.com</span>
-                            </a>
-                        </div>
+                            <div className="col-md-3 mt-2 mr-2 box_shp">
+                                <a  className={""}  style={{color:'black'}} href="https://www.facebook.com/lucidexsolutions/" target="_blank">
+                                    <i className="fa fa-facebook mr-1 p-1"></i><span>Facebook</span>
+                                </a>
+                            </div>
+                            <div className="col-md-3 mt-2 mr-2 box_shp">
+                                <a  className={""}  style={{color:'black'}} href="https://www.linkedin.com/company/31043839/" target="_blank">
+                                    <i className="fa fa-linkedin mr-1 p-1"></i><span>Linkedin</span>
+                                </a>
+                            </div>
+                            <div className="col-md-3 mt-2 mr-2 box_shp">
+                                <a  className={""}  style={{color:'black'}} href="https://www.instagram.com/lucidex_solutions/" target="_blank">
+                                    <i className="fa fa-instagram mr-1 p-1m"></i><span>Instagram</span>
+                                </a>
+                            </div>
+                            <div className="col-md-3 mt-2 mr-2 box_shp">
+                                <a  className={""} style={{color:'black'}}  href="https://twitter.com/lucidex_" target="_blank">
+                                    <i className="fa fa-twitter mr-1 p-1" ></i><span>Twitter</span>
+                                </a>
+                            </div>
+                            <div className="col-md-6 mt-2 box_shp">
+                                <a  className={""}  style={{color:'black'}} href="mailto:inhowrelax@gmail.com" >
+                                    <i className="fa fa-envelope mr-1 p-1" ></i><span>Email : inhowrelax@gmail.com</span>
+                                </a>
+                            </div>
+                            <div className="col-md-6 mt-2 box_shp">
+                                <img src={newimg} className="img-fluid" />
+                            </div>
                         </div>
                     </div>
 
