@@ -121,7 +121,7 @@ class App extends Component {
                                 </MDBNavbarNav>
                                 <MDBNavbarNav right>
                                     <MDBNavItem>
-                                        <MDBNavLink className="waves-effect waves-light" to=""
+                                        <MDBNavLink className="waves-effect waves-light" to="/aboutus"
                                                     style={{fontWeight: '700'}}>
                                             <img src={howrelaxonlylogo} className="img-fluid"
                                                  style={{height: '30px', width: '30px'}}/>
@@ -155,8 +155,7 @@ class App extends Component {
                             <MDBRow>
                                 <MDBCol className="col-12 col-md-3">
                                     <img src={word} className="img-fluid" style={{height: '30px'}}/>
-                                    <h6 className="title" style={{fontWeight: '800'}}> Stay Home &nbsp; |&nbsp; Stop The
-                                        Spread &nbsp;| &nbsp;Save Lives</h6>
+                                    <p  className="ml-2 p-1" style={{fontWeight: '500', color:"white", fontSize:'12px'}}> Welcome to How Relax, your number one source for all things your relax life.</p>
                                 </MDBCol>
                                 <MDBCol className="col-6 col-md-3">
                                     <ul>
