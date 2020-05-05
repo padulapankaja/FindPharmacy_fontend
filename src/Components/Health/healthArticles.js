@@ -65,7 +65,7 @@ class HealthArticles extends Component {
                             <div className="blog-post-txt">
 
 
-                                <h5 className="h5-xl steelblue-color mt-3"><a style={{ color: 'black', fontWeight: '600' }} href={`/ar/wes/${data._id}`}  >{data.title}</a></h5>
+                                <h5 className="h5-xl steelblue-color mt-3"><a style={{ color: 'black', fontWeight: '600' }} href={`/ar/wes/${data._id}`}  >{data.title}   <span  style={{color:"#00897b "}}>Click Here</span> </a></h5>
 
                                 <span style={{ fontSize: '12px' }}>  {moment(data.date).startOf('hour').fromNow()} &nbsp;  |  &nbsp; {moment(data.date).format('MMMM Do YYYY')}</span>
 
