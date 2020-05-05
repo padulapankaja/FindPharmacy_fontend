@@ -62,26 +62,37 @@ class App extends Component {
                             <MDBCollapse id="navbarCollapse3" isOpen={this.state.collapse} navbar>
 
                                 <MDBNavbarNav left>
+
                                     <MDBNavItem>
                                         <MDBNavLink to="/ar">Articles</MDBNavLink>
                                     </MDBNavItem>
+                                    <MDBNavItem>
+                                        <MDBNavLink to="/healthnews">Health News</MDBNavLink>
+                                    </MDBNavItem>
+                                    <MDBNavItem>
+                                        <MDBNavLink to="/ayurveda">Ayurveda News </MDBNavLink>
+                                    </MDBNavItem>
 
                                     <MDBNavItem>
-                                        <MDBDropdown>
-                                            <MDBDropdownToggle nav caret>
-                                                <div className="d-md-inline">News</div>
-                                            </MDBDropdownToggle>
-                                            <MDBDropdownMenu className="dropdown-default">
-                                                <MDBDropdownItem href="/corona"
-                                                                 style={{color: '#2980b9', fontWeight: '900'}}>Lates
-                                                    Corona Updates</MDBDropdownItem>
-                                                <MDBDropdownItem href="/healthnews">Health News</MDBDropdownItem>
-                                                <MDBDropdownItem href="/ayurveda">Ayurvedic News</MDBDropdownItem>
-                                                <MDBDropdownItem href="/ha">Health Articles</MDBDropdownItem>
-
-                                            </MDBDropdownMenu>
-                                        </MDBDropdown>
+                                        <MDBNavLink to="/corona"  style={{color: '#2980b9', fontWeight: '900'}}>Corona Updates </MDBNavLink>
                                     </MDBNavItem>
+
+
+
+                                    {/*<MDBNavItem>*/}
+                                    {/*    <MDBDropdown>*/}
+                                    {/*        <MDBDropdownToggle nav caret>*/}
+                                    {/*            <div className="d-md-inline">News</div>*/}
+                                    {/*        </MDBDropdownToggle>*/}
+                                    {/*        <MDBDropdownMenu className="dropdown-default">*/}
+                                    {/*            <MDBDropdownItem href="/corona"*/}
+                                    {/*                             style={{color: '#2980b9', fontWeight: '900'}}>Lates*/}
+                                    {/*                Corona Updates</MDBDropdownItem>*/}
+                                    {/*            <MDBDropdownItem href="/ha">Health Articles</MDBDropdownItem>*/}
+
+                                    {/*        </MDBDropdownMenu>*/}
+                                    {/*    </MDBDropdown>*/}
+                                    {/*</MDBNavItem>*/}
                                     <MDBNavItem>
                                         <MDBDropdown>
                                             <MDBDropdownToggle nav caret>
