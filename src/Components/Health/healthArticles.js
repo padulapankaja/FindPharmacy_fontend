@@ -93,11 +93,12 @@ class HealthArticles extends Component {
 
         var popularpost = this.state.articles.reverse().slice(0, 3).map((data, i) => {
             return (
-
-                <li key={data._id} className="clearfix d-flex align-items-center mt-2 mb-2" >
+                <a key={data._id} style={{ color: 'black', fontWeight: '600' }} href={`/ar/wes/${data._id}`}  >
+                <li  className="clearfix d-flex align-items-center mt-2 mb-2"  >
                     <img className="img-fluid" style={{ height: '50px', width: '80px' }} src={`${NewsApi.server}${NewsApi.port}/${data.image}`} alt="ayurveda health" />
                     <p className="ml-1" style={{ fontSize: '12px', fontWeight: '600' }} >{data.title}</p>
                 </li>
+                </a>
             );
         });
 
