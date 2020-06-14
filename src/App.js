@@ -148,6 +148,8 @@ class App extends Component {
                         <Route path='/ar/wes/:id' component={SinglePost}/>
                         <Route path='*' component={HealthAticles}/>
                         <Route path='*' component={HealthAticles}/>
+                        <Route component={() => (<div>404 Not found </div>)} />
+
                     </Switch>
                     {/* ******************************************** */}
                     <MDBFooter color="teal accent-4" className="font-small pt-4 mt-4">

@@ -30,7 +30,7 @@ class Corona extends Component {
             key: 'covid19',
             mkt: 'en'
         };
-        await axios.post(`${NewsApi.serverNews}${NewsApi.portNews}${NewsApi.api.news}`, Keywordserach).then(res => {
+        await axios.post(`${NewsApi.server}${NewsApi.port}${NewsApi.api.news}`, Keywordserach).then(res => {
             this.setState({
                 allNews: res.data.value
             })
