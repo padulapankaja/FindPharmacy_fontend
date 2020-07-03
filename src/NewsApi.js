@@ -4,8 +4,8 @@
 class NewsApi {
   constructor() {
    /// this.serverNews = "http://89.40.15.19";
-  this.server = "http://127.0.0.1";  //locally
-     // this.server = "http://13.59.42.212";    //rahals server
+ // this.server = "http://127.0.0.1";  //locally
+      this.server = "http://13.59.253.94";    //rahals server
     this.port = ":4000"
     this.portNews = ":9000";
     this.authPort = "";
